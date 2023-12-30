@@ -1,7 +1,6 @@
 import { Component } from 'react';
 
 import Statistics from './components/Statistics/Statistics';
-// import { FeedbackOptions } from './components/FeedbackOptions/FeedbackOptions';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 
 class App extends Component {
@@ -10,16 +9,12 @@ class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  // handlerClick = ({ target: { name } }) => {
-  //   this.setState({
-  //     [name]: this.state[name] + 1,
-  //   });
-  // };
-  handlerClick = state => {
-    this.setState(prev => ({
-      [state]: prev[state] + 1,
-    }));
+  handlerClick = ({ target: { name } }) => {
+    this.setState({
+      [name]: this.state[name] + 1,
+    });
   };
+
   countTotalFeedback = () =>
     this.state.good + this.state.neutral + this.state.bad;
 
@@ -48,7 +43,7 @@ class App extends Component {
             positive={positive}
           />
         ) : (
-          <div>test</div>
+          <p>Leave your feedback </p>
         )}
       </>
     );
