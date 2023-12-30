@@ -9,10 +9,11 @@ class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  handlerClick = ({ target: { name } }) => {
-    this.setState({
-      [name]: this.state[name] + 1,
-    });
+
+  handlerClick = name => {
+    this.setState(prev => ({
+      [name]: prev[name] + 1,
+    }));
   };
 
   countTotalFeedback = () =>
