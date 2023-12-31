@@ -1,0 +1,30 @@
+.green {
+  color: lightgreen;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}
+.blue {
+  color: lightblue;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}
+.red {
+  color: lightcoral;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}
+.orange {
+  color: orange;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}
+.feedback {
+  color: plum;
+  font-weight: 700;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px #000;
+}

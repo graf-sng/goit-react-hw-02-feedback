@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import Statistics from './components/Statistics/Statistics';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
+import Section from 'components/Section/Section';
 
 class App extends Component {
   state = {
@@ -29,22 +30,24 @@ class App extends Component {
 
     return (
       <>
-        <h3>Please leave feedback</h3>
-
-        <FeedbackOptions
-          options={Object.keys(this.state)}
-          onLeaveFeedback={this.handlerClick}
-        />
-        {total ? (
-          <Statistics
-            good={good}
-            neutral={neutral}
-            bad={bad}
-            total={total}
-            positive={positive}
+        <Section title="Please leave feedback">
+          <FeedbackOptions
+            options={Object.keys(this.state)}
+            onLeaveFeedback={this.handlerClick}
           />
+        </Section>
+        {total ? (
+          <Section title="Statistics">
+            <Statistics
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={total}
+              positive={positive}
+            />
+          </Section>
         ) : (
-          <p>Leave your feedback </p>
+          <Section title="There is no feedback" />
         )}
       </>
     );

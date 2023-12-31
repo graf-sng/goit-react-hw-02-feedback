@@ -8,4 +8,5 @@
 .btn:active,
 .btn:hover {
   background-color: lightskyblue;
+  color: #fff;
 }
